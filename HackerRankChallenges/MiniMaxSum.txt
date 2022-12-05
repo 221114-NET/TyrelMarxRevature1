@@ -1,0 +1,12 @@
+      public static void miniMaxSum(List<int> arr)
+    {
+	//add all the numbers up
+        long result = 0;
+        for (int i = 0; i < arr.Count; i++)
+        {
+            result += arr[i];
+        }
+	//print the numbers and subtract the largest number
+	//then add a space then take the numbers and subtract the smallest one
+        Console.Write(result - arr.Max() + " " + result - arr.Min());
+    }
