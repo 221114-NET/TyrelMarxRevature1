@@ -1,0 +1,21 @@
+ public static List<int> gradingStudents(List<int> grades)
+    {
+        //loop through each grade in the array
+        for (int i = 0; i < grades.Count; i++)
+        {
+            //save the current grade in a temp variable
+            var tempGrade = grades[i];
+            //check if it is less than 38
+            if (tempGrade >= 38)
+            {
+                //see if the grade is devisible by 5 and get the remainder since the remainder can be used to tell how far away from 5 you are
+                int differnce = 5 - (tempGrade % 5);
+                //check if the rounding is further than 5-3 because the problem asks for rounding on only numbers that are
+                if (differnce < 3)
+                //if it is is less than 3 then round up to 5 by adding the currently saved grade tempgrade + the differnce remaining to get to 5 then save it back into the array
+                    grades[i] = tempGrade + differnce;
+            }
+        }
+        //return
+        return grades;
+    }
