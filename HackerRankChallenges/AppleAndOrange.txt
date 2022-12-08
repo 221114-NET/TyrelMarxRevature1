@@ -1,0 +1,21 @@
+    public static void countApplesAndOranges(int s, int t, int a, int b, List<int> apples, List<int> oranges)
+    {
+        int appleCount = 0;
+        int orangeCount = 0;
+	//check if each apple in apples falls on the house by adding the tree's position with the fall and checking
+	//if it falls on or inbetween  s or t
+	//do the same with oranges
+        foreach (int apple in apples)
+        {
+            int fall = a + apple;
+            if (fall >= s && fall <= t) appleCount++;
+
+        }
+        foreach (int orange in oranges)
+        {
+            int fall = b + orange;
+            if (fall >= s && fall <= t) orangeCount++;
+        }
+        System.Console.WriteLine(appleCount);
+        System.Console.WriteLine(orangeCount);
+    }
