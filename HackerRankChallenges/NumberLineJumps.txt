@@ -1,0 +1,26 @@
+public static string kangaroo(int x1, int v1, int x2, int v2)
+    {
+                //since there is a constraint that says x1 < x2 the kangaroo starting at x2 must have a higher speed since he starts behind x1 or he will never be able to catch up
+        if(v1 > v2) 
+        {
+            //j = number of jumps
+            // x1 + v1 x j = x2 + v2 * j
+            // v1j - v2j = x2 - x1
+            // j(v1 - v2) = x2 - x1
+            // j = x2 -x1 / v1-v2
+            // if x2-x1 % vq-v2 == 0 then yes
+            if((x2 - x1) % (v1-v2) == 0) 
+            {
+                return "YES";
+            } 
+            else 
+            {
+                return "NO";
+            }
+        } 
+        else 
+        {
+            return "NO";
+        }
+    
+    }
