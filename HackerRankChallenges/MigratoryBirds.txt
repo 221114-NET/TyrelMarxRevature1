@@ -1,0 +1,30 @@
+public static int migratoryBirds(List<int> arr)
+    {
+//loop through each element in the array and add it to a hashtable to keep track of how many times it appears
+        Hashtable ht = new Hashtable();
+        foreach (var item in arr)
+        {
+            if (ht.ContainsKey(item))
+            {
+                ht[item] = (int)ht[item] + 1;
+            }
+            else
+            {
+                ht.Add(item, 1);
+            }
+        }
+        int max = 0;
+        int maxkey = 0;
+        //loop through the hashtable and find the key with the highest value
+        for (int i = 1; i <= 5; i++)
+        {
+            if ((int?)ht[i] > max)
+            {
+                max = (int)ht[i];
+                maxkey = (int)i;
+            }
+        }
+        Console.WriteLine(maxkey);
+        Console.ReadLine();
+        return maxkey;
+    }
