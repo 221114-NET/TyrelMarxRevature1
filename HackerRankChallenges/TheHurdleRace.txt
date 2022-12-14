@@ -1,0 +1,6 @@
+    public static int hurdleRace(int k, List<int> height)
+    {
+	//subtract current height power k from the highest hurdle if >= 0 return = else return
+	//the number of potions that is needed as a positve number to be able to pass the hurdles
+        return k - height.Max() >= 0 ? 0 : Math.Abs(k - height.Max());
+    }
