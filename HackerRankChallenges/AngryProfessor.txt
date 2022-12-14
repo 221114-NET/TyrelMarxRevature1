@@ -1,0 +1,14 @@
+    public static string angryProfessor(int k, List<int> a)
+    {
+        int count = 0;
+        //count how many students are late
+        foreach (int i in a)
+        {
+            if (i <= 0)
+            {
+                count++;
+            }
+        }
+        //if the number of students who are late is greater than or equal to k, then the class is cancelled
+        return (count >= k) ? "NO" : "YES";
+    }
