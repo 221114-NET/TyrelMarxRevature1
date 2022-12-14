@@ -1,0 +1,17 @@
+public static int sockMerchant(int n, List<int> ar)
+    {
+         //loop through the array and count the number of pairs
+        //by sorting the array and comparing items next to each other
+        //if they are the same, increment the count and skip the next item
+        int count = 0;
+        ar.Sort();
+        for (int i = 0; i < ar.Count - 1; i++)
+        {
+            if (ar[i] == ar[i + 1])
+            {
+                count++;
+                i++;
+            }
+        }
+        return count;
+    }
