@@ -1,0 +1,36 @@
+public static string dayOfProgrammer(int year)
+    {
+        //if the year is 1918, then the day of the programmer is 26.09.1918
+        if (year == 1918)
+        {
+            return "26.09." + year;
+        }
+        //check if the year is before 1918 since there are differn callenders 
+        else if (year < 1918)
+        {
+            //for the julian calender, if the year is divisible by 4 then it is a leap year
+            if (year % 4 == 0)
+            {
+                return "12.09." + year;
+            }
+            //if the year is not divisible by 4 then it is not a leap year
+            else
+            {
+                return "13.09." + year;
+            }
+        }
+        //check if the year is after 1918 since there are differnt callenders
+        else if (year > 1918)
+        {
+            // for the Gregorian calender, if the year is divisible by 400 or divisible by 4 and not divisible by 100 then it is a leap year
+            if ((year % 400 == 0) || ((year % 4 == 0) && !(year % 100 == 0)))
+            {
+                return "12.09." + year;
+            }
+            else
+            {
+                return "13.09." + year;
+            }
+        }
+        return "1";
+    }
