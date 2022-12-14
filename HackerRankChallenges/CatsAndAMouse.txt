@@ -1,0 +1,10 @@
+ static string catAndMouse(int x, int y, int z) {
+        x = Math.Abs(x-z);
+        y = Math.Abs(y-z);
+        if (y > x)
+        return "Cat A";
+        else if (y < x)
+        return "Cat B";
+        else
+        return "Mouse C";
+    }
