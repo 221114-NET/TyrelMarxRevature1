@@ -1,0 +1,17 @@
+public static int designerPdfViewer(List<int> h, string word)
+    {
+        int max = 0;
+        foreach (char c in word)
+        {
+            //int index = (int)c - 97 (ASCII value of 'a' is 97)
+            int index = c - 'a';
+            //check if the height of the current letter is greater than the max height
+            if (h[index] > max)
+            {
+                max = h[index];
+            }
+        }
+        //return the max height * the length of the word to get the area
+        return max * word.Length;
+
+    }
